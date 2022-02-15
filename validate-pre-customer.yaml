@@ -15,7 +15,7 @@ Resources:
         para o sqs, para ser processado posteriormente.
       MemorySize: 128
       Timeout: 3
-      Role: 'arn:aws:iam::297738258633:role/LambdaFunctionsRole'
+      Role: ''
       Events:
         Api1:
           Type: Api
@@ -29,16 +29,15 @@ Resources:
             Method: POST
       VpcConfig:
         SecurityGroupIds:
-          - sg-03ed5bdb6048d0544
+          -
         SubnetIds:
-          - subnet-0448a35c96f4a061f
-          - subnet-0b5901f76345dc1a8
+          -
       Environment:
         Variables:
-          CREATE_PRE_CUSTOMER_SQS: 'https://sqs.sa-east-1.amazonaws.com/297738258633/create-pre-customer'
+          CREATE_PRE_CUSTOMER_SQS: ''
           MAXIMUM_QTD_NAME: '128'
           MAXIMUM_QTD_PASSWORD: '32'
           MINIMUM_QTD_PASSWORD: '8'
           TABLE_NAME_CUSTOMER: customer
       Layers:
-        - 'arn:aws:lambda:sa-east-1:297738258633:layer:utils:20'
+        - ''
